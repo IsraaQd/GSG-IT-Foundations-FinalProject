@@ -38,19 +38,19 @@ class Main_File:
         for books in self.__book_list:
             if books.get_book_status() == Constants.INACTIVE_BOOK:
                 self.__borrowed_books.append(books)
-                print(self.__borrowed_books)
+        print(len(self.__borrowed_books))
 
     def total_available_books(self):
         for books in self.__book_list:
             if books.get_book_status() == Constants.ACTIVE_BOOK:
                 self.__available_books.append(books)
-                print(self.__available_books)
+        print(len(self.__available_books))
 
     def total_borrowed_orders(self):
         for books in self.__order_list:
             if books.get_order_status() == Constants.ACTIVE_ORDER:
                 self.__borrow_orders.append(books)
-                print(self.__borrow_orders)
+        print(len(self.__borrow_orders))
 
     def get_book_list(self):
         return self.__book_list
@@ -78,3 +78,9 @@ class Main_File:
 
     def get_last_book_id(self) -> int:
         return self.__book_list[len(self.__book_list) - 1].get_book_id()
+
+    def get_last_librarian_id(self) -> int:
+        return self.__librarian_list[len(self.__librarian_list) - 1].get_id()
+
+    def get_last_order_id(self) -> int:
+        return self.__order_list[len(self.__order_list) - 1].get_order_id()

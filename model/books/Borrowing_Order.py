@@ -1,7 +1,10 @@
 import datetime
 
+from utils.Constants import Constants
+
+
 class Borrowing_Order:
-    def __init__(self, order_id: int, date, client_id: int, book_id: int, order_status):
+    def __init__(self, order_id: int, date, client_id: int, book_id: int, order_status: Constants):
         self.__order_id: int = order_id
         self.__date = date
         self.__client_id: int = client_id

@@ -1,6 +1,9 @@
+from utils.Constants import Constants
+
+
 class Book:
 
-    def __init__(self, book_id: int, title: str, description: str, author: str, book_status: bool):
+    def __init__(self, book_id: int, title: str, description: str, author: str, book_status: Constants):
         self.__book_id: int = book_id
         self.__title = title.title()
         self.__description = description
